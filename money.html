@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Saving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-cyan-200">
+    <header>
+        <h1 class="text-5xl text-center mt-8 font-bold">Let's Money<samp class="text-fuchsia-600 text-6xl font-bold">
+                Saving-Expert</samp>
+        </h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-- Balance and Transaction -->
+        <section class="mt-12">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-green-300 p-8 rounded-lg">
+                    <img class="mt-12 rounded-lg" src="images/2.jpg" alt="">
+                </div>
+                <div class="bg-red-200 p-8 rounded-lg">
+
+                    <!-- Total Income -->
+                    <div>
+                        <h3 class="text-4xl font-bold mx-auto text-center">Please Deposit</h3>
+                        <div class="grid grid-cols-2 mt-8 text-center">
+                            <h3 class="text-2xl">Income</h3>
+                            <input id="deposit-input" class="border-2 block border-gray-400 rounded w-3/4 mb-4 px-2"
+                                type="text" placeholder="Income Totel amount">
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Expenses -->
+
+                        <div class="text-center">
+                            <h3 class="text-4xl font-bold mx-auto text-center">Expenses</h3>
+                            <div class="grid grid-cols-2 mt-8 text-center">
+                                <h3 class="text-2xl">Food:</h3>
+                                <input id="withdraw-input"
+                                    class="border-2 block border-gray-400 rounded w-3/4 mb-4 px-2" type="text"
+                                    placeholder="Food amount">
+                                <h3 class="text-2xl">Rent:</h3>
+                                <input id="withdraw-input1"
+                                    class="border-2 block border-gray-400 rounded w-3/4 mb-4 px-2" type="text"
+                                    placeholder="Rent amount">
+                                <h3 class="text-2xl">Clothes:</h3>
+                                <input id="withdraw-input2"
+                                    class="border-2 block border-gray-400 rounded w-3/4 mb-4 px-2" type="text"
+                                    placeholder="Clothes amount">
+                            </div>
+                            <button id="deposit-button"
+                                class="rounded-lg bg-blue-600 px-4 py-2 text-white font-bold ">Calculate</button>
+                        </div>
+                        <!-- Total Expenses and Balance -->
+                        <div class="grid grid-cols-2 text-center mt-4">
+                            <h3 class="text-3xl font-bold">Total Expenses:</h3>
+                            <h4 class="text-4xl">TK=<span id="withdraw-total">00</span></h4>
+                        </div>
+                        <div class="grid grid-cols-2 text-center">
+                            <h3 class="text-3xl font-bold">Balance:</h3>
+                            <h4 class="text-4xl">TK=<span id="deposit-total">00</span></h4>
+                        </div>
+                        <!-- Save 20% button -->
+
+                        <div class="grid grid-cols-4 mt-8 text-center">
+                            <h3 class="text-2xl">Save:</h3>
+                            <input id="save-input" class="border-2 block border-gray-400 rounded w-3/4 mb-4 px-2"
+                                type="text" placeholder="max-20">
+                            <h3 class="text-2xl">%</h3>
+                            <button id="save-button"
+                                class="rounded-lg bg-blue-600 px-2 py-2 text-white font-bold">Save</button>
+                        </div>
+
+                        <!-- Saving Amount and Remaining Balance-->
+
+                        <div class="grid grid-cols-2 text-center mt-4">
+                            <h3 class="text-3xl font-bold">Saving Amount:</h3>
+                            <h4 class="text-4xl">TK=<span id="saving-total">00</span></h4>
+                        </div>
+                        <div class="grid grid-cols-2 text-center">
+                            <h3 class="text-2xl font-bold ">Remaining Balance:</h3>
+                            <h4 class="text-4xl">TK=<span id="balance-total">00</span></h4>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="text-center mt-8 mb-8 p-4 rounded-full bg-pink-400 text-white font-bold">
+                <div class="notify-section">
+                    <p id="notify-fail" class="notify">❌ Taka Didn't Match, Please try again</p>
+                    <p id="notify-success" class="notify">✅ Taka right...is Saveing for you</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/money.js"></script>
+</body>
+
+</html>
